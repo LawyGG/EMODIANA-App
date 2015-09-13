@@ -1,0 +1,279 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="ull.emo_diana.Emo_tab"
+    android:orientation="vertical"
+    android:background="@color/med_blue">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/green_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_1green"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/yellow_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_2yellow"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:longClickable="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/orange_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_3orange"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/red_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_4red"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton"
+            android:layout_marginRight="5dp" />
+
+        <ImageButton
+            android:id="@+id/pink_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_5pink"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/select_emotion"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <ImageView
+                    android:id="@+id/neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/neutral"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+                <ImageView
+                    android:id="@+id/happy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/happiness"
+                    android:layout_column="29"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/surprise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/surprise"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+                <ImageView
+                    android:id="@+id/fear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fear"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/shame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shame"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+                <ImageView
+                    android:id="@+id/pride"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pride"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/anger"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/anger"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+                <ImageView
+                    android:id="@+id/disgust"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/digust"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/fun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fun"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+                <ImageView
+                    android:id="@+id/sadness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sadness"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:onClick="selectImage" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_back"
+            android:id="@+id/back_button"
+            android:background="@color/dark_blue"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:onClick="clickControlButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_next"
+            android:id="@+id/next_button"
+            android:background="@color/dark_blue"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:onClick="clickControlButton" />
+
+    </LinearLayout>
+
+</LinearLayout>

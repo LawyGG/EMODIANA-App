@@ -1,0 +1,217 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="ull.emo_diana.User_tab"
+    android:orientation="vertical"
+    android:background="@color/med_blue"
+    android:clickable="false"
+    android:nestedScrollingEnabled="false">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/green_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_1green"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/yellow_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_2yellow"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:longClickable="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/orange_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_3orange"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+
+        <ImageButton
+            android:id="@+id/red_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_4red"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton"
+            android:layout_marginRight="5dp" />
+
+        <ImageButton
+            android:id="@+id/pink_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0099cc"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/button_5pink"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="clickHeaderButton" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/user_name"
+                android:id="@+id/name" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextName"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:editable="true" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/user_age"
+                android:id="@+id/textView3" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editTextAge"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/user_gender"
+                android:id="@+id/textView4"
+                android:layout_marginBottom="5dp" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_girl"
+                    android:id="@+id/radioGirl"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:onClick="clickRadioButtons" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_boy"
+                    android:id="@+id/radioBoy"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:onClick="clickRadioButtons" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_back"
+            android:id="@+id/back_button"
+            android:background="@color/dark_blue"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:onClick="clickControlButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/b_next"
+            android:id="@+id/next_button"
+            android:background="@color/dark_blue"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:onClick="clickControlButton" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
